@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[测试版权信息]]></title>
-    <url>%2F2017%2F09%2F29%2F%E6%B5%8B%E8%AF%95%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
     <title><![CDATA[误删了Assets.xcasetts]]></title>
     <url>%2F2017%2F09%2F23%2F%E8%AF%AF%E5%88%A0%E4%BA%86Assets-xcasetts%2F</url>
     <content type="text"><![CDATA[误删了Assets.xcasetts？ 今天在删除文件的时候，一不小心手贱就把Assets.xcasetts删除了，淡定的我默默的打开了废纸篓，拖了回去🤷‍♀️，没想到，打开app后发现所有的图片都不显示了。。。 解决办法 1.打开废纸篓，将Assets.xcasetts放回原处 2.找到Assets.xcasetts所在的目录，将其移到桌面 3.回到xcode，new -&gt; File…-&gt; Resource -&gt;Asset Catalog 将其命名为Assets.xcasetts 4.退出xcode，把桌面上的Assets.xcasetts替换掉项目里新创建的Assets.xcasetts 5.你可以继续愉快的编程了😄 （如果还不行的话，那就只能把所有图片重新拖到新创建的Assets.xcasetts里了）]]></content>
