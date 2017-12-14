@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Xmnone17</title>
+  
+  <subtitle>屁话少说，放码过来</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-12-02T09:39:03.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Liu,Linzhe</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>仿知乎广告植入</title>
+    <link href="http://yoursite.com/2017/12/01/%E4%BB%BF%E7%9F%A5%E4%B9%8E%E5%B9%BF%E5%91%8A%E6%A4%8D%E5%85%A5/"/>
+    <id>http://yoursite.com/2017/12/01/仿知乎广告植入/</id>
+    <published>2017-12-01T13:17:25.000Z</published>
+    <updated>2017-12-02T09:39:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>23.30熄灯–&gt;上床–&gt;刷微博、知乎–&gt;00.30睡觉。这应该是我近几个月最常做的事了，刷微博对于我来说，能随时随地发现新鲜事，能作为饭后的谈资，知乎更像是支付宝里的蚂蚁森林，每次刷都会发现很有趣的东西，吸取其中的能量。前天夜晚，我也像往常一样刷着知乎，正当我困意十足，准备睡觉时，突然一个神奇的cell吸引了我的注意力。仔细一看，原来是知乎植入的广告，这种植入方式，真的是太有创意了emmmmmmmmm。所以我打算模仿一下</p></blockquote><a id="more"></a><p><strong>效果图：</strong></p><p><img src="https://raw.githubusercontent.com/Liulinzhe17/ZhihuAds/master/ZhihuAds.gif" alt="效果图"><br>​    </p><p>这种植入广告的方式真的很赞，仅用有限的区域，就能展示一个全屏的广告，很多用户可能会对这种cell很新奇，便会点击进去，就比如我emmmmmm</p><p><em>demo地址：</em><a href="https://github.com/Liulinzhe17/ZhihuAds" target="_blank" rel="external">https://github.com/Liulinzhe17/ZhihuAds</a></p><h5 id="正文："><a href="#正文：" class="headerlink" title="正文："></a><strong>正文：</strong></h5><p>整体的思路还是很清晰的，就是一个tableview里有两种不同类型的tableviewcell，一种是内容cell，一种是广告cell，当广告cell可视的时候，其背景色设为透明，并且将tableview的背景设置成广告图片，当广告cell离开屏幕时，将tableview的背景视图设为nil即可。</p><h5 id="其中要注意的一些点："><a href="#其中要注意的一些点：" class="headerlink" title="其中要注意的一些点："></a>其中要注意的一些点：</h5><ul><li><p>将广告cell 背景色改成透明</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adscell.backgroundColor=[UIColor clearColor];</div></pre></td></tr></table></figure></li><li><p>tableviewcell的高度要根据内容自适应，仔细观察会发现知乎的内容简介最多不超过三行，所以我 设置了UIlabel最大行数。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">label.numberofLines=3;</div></pre></td></tr></table></figure></li><li><p>tableviewcell里的contentView中内容高度不固定的，要设置其上下左右约束。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//cell高度随内容自适应</div><div class="line">_tableview.estimatedRowHeight=100;//估算内容高度</div><div class="line">_tableview.rowHeight=UITableViewAutomaticDimension;</div></pre></td></tr></table></figure><p>​</p></li><li><p>当广告cell进入屏幕时，将此时tableview的背景图片改成广告图片，当广告cell离开屏幕时，将背景图片置空即：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//判断广告cell是否在屏幕上</div><div class="line">- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath&#123;</div><div class="line">    if ([types[indexPath.section]intValue]==0) &#123;</div><div class="line">        //移除广告背景图片</div><div class="line">        self.tableview.backgroundView=nil;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li><li><p>当点击广告cell时，要判断此时广告cell所处的坐标，然后广告图片从广告cell所处的位置出发，渐渐的扩大到整个屏幕。（PS：其实有更加好的做法，就是再添加两个掩盖层，一个往上收，一个往下收，这样效果会好一点，不会有图片被压缩的感觉）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"> //获取tableviewcell相对父视图的位置</div><div class="line">CGRect rectInTableView = [tableView rectForRowAtIndexPath:indexPath];</div><div class="line">CGRect location = [tableView convertRect:rectInTableView toView:[tableView superview]];</div></pre></td></tr></table></figure></li></ul><hr><h5 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h5><p>点击广告cell的处理还有一些问题，个人觉得应该是将广告cell扩大到整个屏幕，而不是添加一个子视图这种蠢操作。。。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;23.30熄灯–&amp;gt;上床–&amp;gt;刷微博、知乎–&amp;gt;00.30睡觉。这应该是我近几个月最常做的事了，刷微博对于我来说，能随时随地发现新鲜事，能作为饭后的谈资，知乎更像是支付宝里的蚂蚁森林，每次刷都会发现很有趣的东西，吸取其中的能量。前天夜晚，我也像往常一样刷着知乎，正当我困意十足，准备睡觉时，突然一个神奇的cell吸引了我的注意力。仔细一看，原来是知乎植入的广告，这种植入方式，真的是太有创意了emmmmmmmmm。所以我打算模仿一下&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://yoursite.com/categories/iOS/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JPA  映射双向多对多的问题</title>
+    <link href="http://yoursite.com/2017/11/28/JPA/"/>
+    <id>http://yoursite.com/2017/11/28/JPA/</id>
+    <published>2017-11-28T12:57:35.000Z</published>
+    <updated>2017-12-14T13:19:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr><blockquote><p>本文主要解决的问题：用jpa实现两张表（多对多关联）的时候碰到<strong>Expected ‘:’ instead of ‘t’</strong>的错误 以及一大堆的jackson errors</p></blockquote><a id="more"></a><p>关于jpa怎么实现两个多对多的表之间的关联，网上已经有一大堆博客讲的非常详细了,可参考</p><p><em>详细版</em>      <a href="https://www.cnblogs.com/lj95801/p/5011537.html" target="_blank" rel="external">https://www.cnblogs.com/lj95801/p/5011537.html</a></p><p><em>简约版</em>       <a href="http://blog.csdn.net/lewis_007/article/details/53006602" target="_blank" rel="external">http://blog.csdn.net/lewis_007/article/details/53006602</a></p><hr><h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>学生实体</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">@Entity</div><div class="line">public class Student &#123;</div><div class="line"></div><div class="line">    @Id</div><div class="line">    private Integer stuId;</div><div class="line">    private String name;</div><div class="line"></div><div class="line">    @ManyToMany(cascade = CascadeType.ALL)</div><div class="line">    @JoinTable(name = &quot;中间表的名字&quot;, joinColumns = &#123;</div><div class="line">            @JoinColumn(name = &quot;stuId&quot;, referencedColumnName = &quot;stuId&quot;)&#125;, inverseJoinColumns = &#123;</div><div class="line">            @JoinColumn(name = &quot;courseId&quot;, referencedColumnName = &quot;courseId&quot;)&#125;)</div><div class="line">    private Set&lt;Course&gt; courses;</div><div class="line"></div><div class="line">    public Student() &#123;</div><div class="line"> </div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public Set&lt;Course&gt; getCourses() &#123;</div><div class="line">        return courses;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void setCourses(Set&lt;Course&gt; courses) &#123;</div><div class="line">        this.courses = courses;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    ...other setters and getters</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure><p>课程实体</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">@Entity</div><div class="line">public class Course &#123;</div><div class="line"></div><div class="line">    @Id</div><div class="line">    private Integer courseId;</div><div class="line">    private String name;</div><div class="line"></div><div class="line">  @ManyToMany(mappedBy = &quot;courses&quot;)</div><div class="line">    private Set&lt;Student&gt; students;</div><div class="line"></div><div class="line">    public Course() &#123;</div><div class="line"> </div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public Set&lt;Student&gt; getStudents() &#123;</div><div class="line">        return students;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void setStudents(Set&lt;Student&gt; students) &#123;</div><div class="line">        this.students = students;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    ...other setters and getters</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure><p>控制器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@RequestMapping(value=&quot;/list&quot;, method=RequestMethod.GET)</div><div class="line">@ResponseBody</div><div class="line">public List&lt;Student&gt; list() &#123;</div><div class="line">    List&lt;Student&gt; stu = stuService.findAll();</div><div class="line">    return stu;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>当我用postman请求这个接口的时候，返回的是<strong>Expected ‘:’ instead of ‘t’</strong>，控制台也会出现以下错误：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[jackson-databind-2.6.6.jar:2.6.6]</div><div class="line">        at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:693) ~[jackson-databind-2.6.6.jar:2.6.6]</div><div class="line">        at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:675) ~[jackson-databind-2.6.6.jar:2.6.6].....省略....</div></pre></td></tr></table></figure><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>为什么会出现这个问题呢？我们看看源码，很容易就发现当请求返回Student列表时，学生类里的courses属性会引用Course类，而Course类里students属性又会引用Student类，因此造成了循环引用。</p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>用@JsonIgnore<br>JsonIgnore注解主要用于属性或者方法上，作用就是忽略属性或者方法，此处用在了getStudents（）方法上<br>只需在课程实体类的 getStudents()方法上加一行代码,即：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@JsonIgnore</div><div class="line">public Set&lt;Student&gt; getStudents() &#123;</div><div class="line">    return students;</div><div class="line">&#125;</div></pre></td></tr></table></figure><hr><h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>Stack Overflow大法好😄</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文主要解决的问题：用jpa实现两张表（多对多关联）的时候碰到&lt;strong&gt;Expected ‘:’ instead of ‘t’&lt;/strong&gt;的错误 以及一大堆的jackson errors&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="web" scheme="http://yoursite.com/categories/web/"/>
+    
+    
+      <category term="springboot" scheme="http://yoursite.com/tags/springboot/"/>
+    
+      <category term="jpa" scheme="http://yoursite.com/tags/jpa/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>误删了Assets.xcasetts</title>
+    <link href="http://yoursite.com/2017/09/23/%E8%AF%AF%E5%88%A0%E4%BA%86Assets-xcasetts/"/>
+    <id>http://yoursite.com/2017/09/23/误删了Assets-xcasetts/</id>
+    <published>2017-09-23T15:51:07.000Z</published>
+    <updated>2017-12-14T13:19:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr><blockquote><p>今天在删除文件的时候，一不小心手贱就把Assets.xcasetts删除了，淡定的我默默的打开了废纸篓，拖了回去🤷‍♀️，没想到，打开app后发现所有的图片都不显示了。。。</p></blockquote><a id="more"></a><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ul><li>1.打开废纸篓，将Assets.xcasetts放回原处</li><li>2.找到Assets.xcasetts所在的目录，将其移到桌面</li><li>3.回到xcode，new -&gt; File…-&gt; Resource -&gt;Asset Catalog 将其命名为Assets.xcasetts</li><li>4.退出xcode，把桌面上的Assets.xcasetts替换掉项目里新创建的Assets.xcasetts</li><li>5.你可以继续愉快的编程了😄 <strong>（如果还不行的话，那就只能把所有图片重新拖到新创建的Assets.xcasetts里了）</strong></li></ul><hr>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;今天在删除文件的时候，一不小心手贱就把Assets.xcasetts删除了，淡定的我默默的打开了废纸篓，拖了回去🤷‍♀️，没想到，打开app后发现所有的图片都不显示了。。。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://yoursite.com/categories/iOS/"/>
+    
+    
+      <category term="xcode" scheme="http://yoursite.com/tags/xcode/"/>
+    
+  </entry>
+  
+</feed>
