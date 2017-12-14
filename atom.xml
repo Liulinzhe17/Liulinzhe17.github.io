@@ -5,9 +5,9 @@
   <subtitle>屁话少说，放码过来</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://liulinzhe.top/"/>
   <updated>2017-12-02T09:39:03.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://liulinzhe.top/</id>
   
   <author>
     <name>Liu,Linzhe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>仿知乎广告植入</title>
-    <link href="http://yoursite.com/2017/12/01/%E4%BB%BF%E7%9F%A5%E4%B9%8E%E5%B9%BF%E5%91%8A%E6%A4%8D%E5%85%A5/"/>
-    <id>http://yoursite.com/2017/12/01/仿知乎广告植入/</id>
+    <link href="http://liulinzhe.top/2017/12/01/%E4%BB%BF%E7%9F%A5%E4%B9%8E%E5%B9%BF%E5%91%8A%E6%A4%8D%E5%85%A5/"/>
+    <id>http://liulinzhe.top/2017/12/01/仿知乎广告植入/</id>
     <published>2017-12-01T13:17:25.000Z</published>
     <updated>2017-12-02T09:39:03.000Z</updated>
     
@@ -33,15 +33,15 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://yoursite.com/categories/iOS/"/>
+      <category term="iOS" scheme="http://liulinzhe.top/categories/iOS/"/>
     
     
   </entry>
   
   <entry>
     <title>JPA  映射双向多对多的问题</title>
-    <link href="http://yoursite.com/2017/11/28/JPA/"/>
-    <id>http://yoursite.com/2017/11/28/JPA/</id>
+    <link href="http://liulinzhe.top/2017/11/28/JPA/"/>
+    <id>http://liulinzhe.top/2017/11/28/JPA/</id>
     <published>2017-11-28T12:57:35.000Z</published>
     <updated>2017-12-14T13:19:48.000Z</updated>
     
@@ -56,19 +56,19 @@
     
     </summary>
     
-      <category term="web" scheme="http://yoursite.com/categories/web/"/>
+      <category term="web" scheme="http://liulinzhe.top/categories/web/"/>
     
     
-      <category term="springboot" scheme="http://yoursite.com/tags/springboot/"/>
+      <category term="springboot" scheme="http://liulinzhe.top/tags/springboot/"/>
     
-      <category term="jpa" scheme="http://yoursite.com/tags/jpa/"/>
+      <category term="jpa" scheme="http://liulinzhe.top/tags/jpa/"/>
     
   </entry>
   
   <entry>
     <title>误删了Assets.xcasetts</title>
-    <link href="http://yoursite.com/2017/09/23/%E8%AF%AF%E5%88%A0%E4%BA%86Assets-xcasetts/"/>
-    <id>http://yoursite.com/2017/09/23/误删了Assets-xcasetts/</id>
+    <link href="http://liulinzhe.top/2017/09/23/%E8%AF%AF%E5%88%A0%E4%BA%86Assets-xcasetts/"/>
+    <id>http://liulinzhe.top/2017/09/23/误删了Assets-xcasetts/</id>
     <published>2017-09-23T15:51:07.000Z</published>
     <updated>2017-12-14T13:19:23.000Z</updated>
     
@@ -83,10 +83,10 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://yoursite.com/categories/iOS/"/>
+      <category term="iOS" scheme="http://liulinzhe.top/categories/iOS/"/>
     
     
-      <category term="xcode" scheme="http://yoursite.com/tags/xcode/"/>
+      <category term="xcode" scheme="http://liulinzhe.top/tags/xcode/"/>
     
   </entry>
   
