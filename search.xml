@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[小白微信公众号]]></title>
+    <url>%2F2017%2F12%2F19%2F%E5%B0%8F%E7%99%BD%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%2F</url>
+    <content type="text"><![CDATA[首先，在需求方面上，个人觉得微信公众号本质上就是以一种服务的形式面向用户，用户在公众号上花的大部分时间都是看文章，查询资源等，例如“长江商业评论、浙商大图书馆“等。从技术层面上看，就是一系列的查询数据库操作。如果在公众号上做过多的增、删、改这种业务操作，实在是没必要。因此从一开始，我们的愿景就是仅提供给用户一些想要的数据。对于程序员来说，音乐就是编程的源泉，没思路的时候，不妨来首音乐放松下。所以我们做了一个公众号，专门提供给用户实时的音乐资源。 简述：（二维码在底部）既然是实时的音乐资源，那么就不能提供假的数据， 所以我利用了爬虫技术，从网易云音乐官网上爬取其热歌榜、新歌榜、热评等实时数据。这时就需要一些爬虫的小技巧了，我就说说我用到的一些小白爬虫技巧吧。足以能够应付以上这些需求了。 一、设置User-agent模拟浏览器，不然运维人员发现访问的ip都是同一个ip，并且User-agent都是Python程序的话。就会被限制访问了。 二、获取代理ip爬取数据，如果同一个ip访问次数过于频繁也会被限制（深受其害…） 三．设置延时访问（试过，Python本身运行就慢，再设置这个，更慢…）爬取热歌榜、新歌榜还是比较轻松的，因为只用访问一次。但是热评就不一样了，有多少音乐id，就要访问多少次。很容易被限制访问。我成功测试了连续访问200次。 菜单栏中的音乐宝库按钮，采用的是内置网页的形式，其中用了微信团队研发的WEUI框架，使用的时候出现了一些小瑕疵，引入navbar的时候并不像demo所示的那种效果，我的解决办法就是重写它的部分css就可以了。今日热评和今日歌曲就用rand()函数随机返回几条数据就行了。 遇到的一个大坑：从数据库返回数据的时候，拼接过程中，不小心在每个url的前面加了换行符…然后就深陷Bug中无法自拔了。 还有一个小坑：js传参数的时候，只能传数字，原因：没转义….（php,html各种穿插真的难写）。 不足之处：功能比较简约，缺少时效性。 总结：以上，就是我在制作“十月音乐盒”公众号时，从设计到实现遇到的一些问题与见解。 二维码在这！]]></content>
+      <categories>
+        <category>php</category>
+        <category>python</category>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>微信公众号</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[仿知乎广告植入]]></title>
     <url>%2F2017%2F12%2F01%2F%E4%BB%BF%E7%9F%A5%E4%B9%8E%E5%B9%BF%E5%91%8A%E6%A4%8D%E5%85%A5%2F</url>
     <content type="text"><![CDATA[23.30熄灯–&gt;上床–&gt;刷微博、知乎–&gt;00.30睡觉。这应该是我近几个月最常做的事了，刷微博对于我来说，能随时随地发现新鲜事，能作为饭后的谈资，知乎更像是支付宝里的蚂蚁森林，每次刷都会发现很有趣的东西，吸取其中的能量。前天夜晚，我也像往常一样刷着知乎，正当我困意十足，准备睡觉时，突然一个神奇的cell吸引了我的注意力。仔细一看，原来是知乎植入的广告，这种植入方式，真的是太有创意了emmmmmmmmm。所以我打算模仿一下 效果图： ​ 这种植入广告的方式真的很赞，仅用有限的区域，就能展示一个全屏的广告，很多用户可能会对这种cell很新奇，便会点击进去，就比如我emmmmmm demo地址：https://github.com/Liulinzhe17/ZhihuAds 正文：整体的思路还是很清晰的，就是一个tableview里有两种不同类型的tableviewcell，一种是内容cell，一种是广告cell，当广告cell可视的时候，其背景色设为透明，并且将tableview的背景设置成广告图片，当广告cell离开屏幕时，将tableview的背景视图设为nil即可。 其中要注意的一些点： 将广告cell 背景色改成透明 1adscell.backgroundColor=[UIColor clearColor]; tableviewcell的高度要根据内容自适应，仔细观察会发现知乎的内容简介最多不超过三行，所以我 设置了UIlabel最大行数。 1label.numberofLines=3; tableviewcell里的contentView中内容高度不固定的，要设置其上下左右约束。 123//cell高度随内容自适应_tableview.estimatedRowHeight=100;//估算内容高度_tableview.rowHeight=UITableViewAutomaticDimension; ​ 当广告cell进入屏幕时，将此时tableview的背景图片改成广告图片，当广告cell离开屏幕时，将背景图片置空即： 1234567//判断广告cell是否在屏幕上- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath&#123; if ([types[indexPath.section]intValue]==0) &#123; //移除广告背景图片 self.tableview.backgroundView=nil; &#125;&#125; 当点击广告cell时，要判断此时广告cell所处的坐标，然后广告图片从广告cell所处的位置出发，渐渐的扩大到整个屏幕。（PS：其实有更加好的做法，就是再添加两个掩盖层，一个往上收，一个往下收，这样效果会好一点，不会有图片被压缩的感觉） 123 //获取tableviewcell相对父视图的位置CGRect rectInTableView = [tableView rectForRowAtIndexPath:indexPath];CGRect location = [tableView convertRect:rectInTableView toView:[tableView superview]]; 结尾点击广告cell的处理还有一些问题，个人觉得应该是将广告cell扩大到整个屏幕，而不是添加一个子视图这种蠢操作。。。]]></content>
