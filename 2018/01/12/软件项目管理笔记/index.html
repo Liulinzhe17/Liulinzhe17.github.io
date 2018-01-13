@@ -79,7 +79,7 @@
 <meta property="og:site_name" content="Xmnone17">
 <meta property="og:description" content="个人笔记项目管理概述 项目就是为了创造一个唯一的产品或提供一个唯一的服务而进行的临时性努力。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-12T13:23:00.000Z">
+<meta property="og:updated_time" content="2018-01-13T13:56:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="软件项目管理笔记">
 <meta name="twitter:description" content="个人笔记项目管理概述 项目就是为了创造一个唯一的产品或提供一个唯一的服务而进行的临时性努力。">
@@ -300,8 +300,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-01-12T21:23:00+08:00">
-                2018-01-12
+              <time title="更新于" itemprop="dateModified" datetime="2018-01-13T21:56:54+08:00">
+                2018-01-13
               </time>
             
           </span>
@@ -330,7 +330,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,167 字
+                  6,173 字
                 </span>
               
 
@@ -346,7 +346,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7 分钟
+                  21 分钟
                 </span>
               
             </div>
@@ -368,8 +368,9 @@
 
       
         <h1 id="个人笔记"><a href="#个人笔记" class="headerlink" title="个人笔记"></a>个人笔记</h1><h2 id="项目管理概述"><a href="#项目管理概述" class="headerlink" title="项目管理概述"></a>项目管理概述</h2><blockquote>
-<p><strong>项目</strong>就是为了创造一个<strong>唯一</strong>的产品或提供一个唯一的服务而进行的<strong>临时性</strong>努力。<br><a id="more"></a></p>
+<p><strong>项目</strong>就是为了创造一个<strong>唯一</strong>的产品或提供一个唯一的服务而进行的<strong>临时性</strong>努力。</p>
 </blockquote>
+<a id="more"></a>
 <h3 id="项目特征"><a href="#项目特征" class="headerlink" title="项目特征"></a>项目特征</h3><ul>
 <li><strong>目标性：</strong>达成某一目的，例如完成一个学生成绩管理系统。</li>
 <li><strong>相关性：</strong>例如举办一个野餐活动，首先选好地点，才能前往地点进行野餐。</li>
@@ -569,6 +570,445 @@
 <li>自顶向下：将一个项目逐步分解成许多子项目，是创建WBS的最好方法</li>
 <li>自底向上：适合陌生的项目</li>
 </ul>
+<h2 id="成本计划"><a href="#成本计划" class="headerlink" title="成本计划"></a>成本计划</h2><h3 id="成本估算过程"><a href="#成本估算过程" class="headerlink" title="成本估算过程"></a>成本估算过程</h3><blockquote>
+<p>关于估算，估算不是很准确，有误差，项目经验数据非常重要，不要迷信某些数学模型</p>
+</blockquote>
+<h4 id="软件项目规模"><a href="#软件项目规模" class="headerlink" title="软件项目规模"></a>软件项目规模</h4><ul>
+<li>软件项目规模也称工作量</li>
+<li>软件规模单位：源代码长度（LOC）、功能点（FP）、人月、人天、人年</li>
+</ul>
+<h4 id="软件项目成本"><a href="#软件项目成本" class="headerlink" title="软件项目成本"></a>软件项目成本</h4><ul>
+<li>完成软件规模付出的代价</li>
+<li>待开发软件项目需要的资金</li>
+<li><strong>人的劳动的消耗所需代价</strong>是软件成品的主要成本。</li>
+<li>成本的单位：RMB、Dollar</li>
+</ul>
+<h4 id="软件规模和软件成本的关系"><a href="#软件规模和软件成本的关系" class="headerlink" title="软件规模和软件成本的关系"></a>软件规模和软件成本的关系</h4><ul>
+<li>规模是成本的主要因素，是成本估算的基础</li>
+<li>有了规模就确定了成本</li>
+</ul>
+<h4 id="成本估算结果"><a href="#成本估算结果" class="headerlink" title="成本估算结果"></a>成本估算结果</h4><ul>
+<li>直接成本<ul>
+<li>与具体项目相关的成本，例如参与项目的人员成本</li>
+</ul>
+</li>
+<li>间接成本<ul>
+<li>房租水电、管理费等</li>
+</ul>
+</li>
+</ul>
+<h3 id="成本估算方法"><a href="#成本估算方法" class="headerlink" title="成本估算方法"></a>成本估算方法</h3><h4 id="代码行估算法"><a href="#代码行估算法" class="headerlink" title="代码行估算法"></a>代码行估算法</h4><blockquote>
+<p>从软件程序量的角度定义项目规模，与具体的编程语言有关，功能分解的足够详细，有类似项目的开发经验。</p>
+</blockquote>
+<ul>
+<li><p>优点：代码是所有软件开发项目都有的“产品”，而且很容易计算代码行数。</p>
+</li>
+<li><p>缺点：</p>
+<ul>
+<li>1、对代码行没有公认的可接受的标准定义</li>
+<li>2、代码行数量依赖于所用的编程语言和个人的编程风格. </li>
+<li>3、在项目早期,需求不稳定、设计不成熟、实现不确定的情况下很难准确地估算代码量. </li>
+<li>4、代码行强调编码的工作量,只是项目实现阶段的一部分 </li>
+</ul>
+</li>
+</ul>
+<h4 id="功能点估算法"><a href="#功能点估算法" class="headerlink" title="功能点估算法"></a>功能点估算法</h4><blockquote>
+<p>与实现的语言和技术没有关系，用系统的功能数量来测量其规模，通过评估、加权、量化得出功能点。</p>
+<p>功能点公式：FP = UFC * TCF</p>
+</blockquote>
+<p>UFC-未调整功能点计数</p>
+<ul>
+<li>外部输入：给软件提供面向应用的数据的项（如屏幕、表单、对话框、控件，文件等。</li>
+<li>外部输出：向用户提供(经过处理的)面向应用的信息，例如，报表和出错信息等。</li>
+<li>内部逻辑文件：用户可以识别的一组逻辑相关的数据，而且完全存在于应用的边界之内，并且通过外部输入维护，是逻辑主文件的数目。 </li>
+<li>外部接口文件：用户可以识别的一组逻辑相关数据，这组数据只能被引用。用这些接口把信息传送给另一个系统。</li>
+<li>外部查询：一个输入引出一个即时的简单输出。没有处理过程。 </li>
+</ul>
+<p>TCF-技术复杂度因子</p>
+<ul>
+<li>TCF = 0.65 + 0.01(sum(Fi))。 </li>
+<li>0 ≤ Fi ≤ 5</li>
+<li>0.65 ≤ TCF ≤ 1.35</li>
+<li>Fi一共14项。</li>
+</ul>
+<h4 id="用例点估算法"><a href="#用例点估算法" class="headerlink" title="用例点估算法"></a>用例点估算法</h4><p>用例点估算方法的基本步骤:</p>
+<ul>
+<li>计算未调整的角色的权值UAW;</li>
+<li>计算未调整的用例的权值UUCW;</li>
+<li>计算未调整的用例点UUCP(unadjusted use case weight);</li>
+<li>计算技术和环境因子TEF(technical and environment factor);</li>
+<li>计算调整的用例点UCP;</li>
+<li>计算工作量。</li>
+</ul>
+<blockquote>
+<p>UUCP = UAW + UUCW</p>
+<p>TCF = 0.6 + (0.01 <em> SUM(W</em>V)) <strong>有13项</strong></p>
+<p>ECF= 1.4 + (-0.03 <em> SUM(W</em>V)) <strong>有8项</strong></p>
+<p>TEF = TCF + ECF</p>
+<p>UCP = UUCP * TEF</p>
+<p>工作量（effort） = UCP * PF(项目生产率)</p>
+<h4 id="类比估算法（自顶向下）"><a href="#类比估算法（自顶向下）" class="headerlink" title="类比估算法（自顶向下）"></a>类比估算法（自顶向下）</h4><p>估算人员根据以往的完成类似项目所消耗的总成本（或工作量），来推算将要开发的软件的总成本（或工作量），然后按比例将它分配到各个开发任务单元中</p>
+</blockquote>
+<ul>
+<li>有类似的历史项目数据</li>
+<li>信息不足（例如市场招标）的时候</li>
+<li>要求不是非常精确估算的时候</li>
+</ul>
+<h4 id="自下而上估算法"><a href="#自下而上估算法" class="headerlink" title="自下而上估算法"></a>自下而上估算法</h4><blockquote>
+<p>利用任务分解图(WBS),对各个具体工作包进行详细的成本估算,然后将结果累加起来得出项目总成本。</p>
+</blockquote>
+<ul>
+<li>相对比较准确，它的准确度来源于每个任务的估算情况</li>
+<li>花费时间</li>
+</ul>
+<h4 id="参数估算法"><a href="#参数估算法" class="headerlink" title="参数估算法"></a>参数估算法</h4><ul>
+<li>通过项目数据,进行回归分析,得出回归模型</li>
+<li>通过参数模型估算(规模)成本的方法。</li>
+<li>具有良好的项目数据为基础（使用条件）</li>
+<li>存在成熟的项目估算模型（使用条件）</li>
+<li>比较简单,而且也比较准确（特点）</li>
+<li>如果模型选择不当或者数据不准,也会导致偏差（特点）</li>
+</ul>
+<p>回归分析模型分为两类，一类是静态单变量模型，另一类是动态多变量模型。</p>
+<ul>
+<li>整体公式:E = a + b * S^c<ul>
+<li>E:以人月表示的工作量</li>
+<li>a,b,c:经验导出的系数</li>
+<li>S:主要的输入参数(通常是LOC,FP等)</li>
+</ul>
+</li>
+</ul>
+<p>Walston-Felix模型</p>
+<ul>
+<li><p>E ＝ 5.2 × (KLOC)^0.91， KLOC是源代码行数，E是工作量（以PM计） </p>
+</li>
+<li><p>D ＝ 4.1 × (KLOC)^0.36，D是项目持续时间(以月计) </p>
+</li>
+<li><p>S ＝ 0.54 × E^0.6，S是人员需要量(以人计) </p>
+</li>
+<li><p>DOC ＝ 49 × (KLOC)^1.01 ，DOC是文档数量(以页计) </p>
+</li>
+</ul>
+<p>COCOMO模型</p>
+<h5 id="COCOMO-81-模型级别"><a href="#COCOMO-81-模型级别" class="headerlink" title="COCOMO 81 模型级别"></a>COCOMO 81 模型级别</h5><p>基本COCOMO：静态单变量模型</p>
+<ul>
+<li>E= a * (KLOC) ^ b</li>
+</ul>
+<p>中等COCOMO：基本模型基础上考虑影响因素，调整模型</p>
+<ul>
+<li>E= a <em> (KLOC) ^ b </em> 乘法因子</li>
+</ul>
+<p>高等COCOMO：中等COCOMO模型基础上考虑各个步骤的影响</p>
+<h5 id="COCOMO-81-项目类型"><a href="#COCOMO-81-项目类型" class="headerlink" title="COCOMO 81 项目类型"></a>COCOMO 81 项目类型</h5><ul>
+<li>有机</li>
+<li>嵌入式</li>
+<li>半有机</li>
+</ul>
+<h5 id="COCOMO"><a href="#COCOMO" class="headerlink" title="COCOMO ||"></a>COCOMO ||</h5><ul>
+<li>应用组装模型—规划阶段</li>
+<li>早期设计模型—设计阶段</li>
+<li>后体系结构模型—开发阶段</li>
+</ul>
+<h4 id="专家估算法"><a href="#专家估算法" class="headerlink" title="专家估算法"></a>专家估算法</h4><blockquote>
+<p>由多位专家进行成本估算，一个专家可能会有偏见，最好由多位专家进行估算，取得多个估算值,最后得出综合的估算值</p>
+</blockquote>
+<ul>
+<li>Ei = (ai + 4*mi + bi) / 6</li>
+</ul>
+<p>项目总估算成本 = 直接成本 + 间接成本</p>
+<h3 id="成本预算"><a href="#成本预算" class="headerlink" title="成本预算"></a>成本预算</h3><blockquote>
+<p>成本预算是将项目的总成本按照项目的进度分摊到各个工作单元中去；成本预算的目的是产生成本基线 </p>
+</blockquote>
+<ul>
+<li>分配资源成本：设置加班费率。</li>
+<li>分配固定资源成本：项目中一个兼职人员成本。</li>
+<li>分配固定成本：外包任务。</li>
+</ul>
+<h2 id="进度计划"><a href="#进度计划" class="headerlink" title="进度计划"></a>进度计划</h2><p>重要性</p>
+<blockquote>
+<p>按时完成项目是项目经理最大的挑战之一;时间是项目规划中灵活性最小的因素;进度问题是项目冲突的主要原因</p>
+</blockquote>
+<ul>
+<li>进度是对执行的活动和里程碑制定的工作计划日期表</li>
+<li>任务是确定为完成项目的各个交付成果所必须进行的诸项具体活动</li>
+</ul>
+<h3 id="任务间关系的依据"><a href="#任务间关系的依据" class="headerlink" title="任务间关系的依据"></a>任务间关系的依据</h3><ul>
+<li>强制性依赖关系。例如，测试活动一定要在编码任务之后进行。</li>
+<li>软逻辑关系。例如哪一个模块先做哪一个模块后做。</li>
+<li>外部逻辑关系。例如环境测试依赖于外部提供的环境设备。</li>
+</ul>
+<h3 id="进程管理图示"><a href="#进程管理图示" class="headerlink" title="进程管理图示"></a>进程管理图示</h3><h4 id="网络图"><a href="#网络图" class="headerlink" title="网络图"></a>网络图</h4><blockquote>
+<p>网络图是活动排序的一个输出,展示项目中各个活动以及活动之间的逻辑关系 </p>
+</blockquote>
+<ul>
+<li>PDM:优先图法 ,节点法 (单代号)网络图<ul>
+<li>节点(Box)表示活动（任务）</li>
+<li>用箭线表示各活动(任务)之间的逻辑关系</li>
+</ul>
+</li>
+<li>ADM:箭线法、双代号网络图<ul>
+<li>箭线表示活动(任务)</li>
+<li>两个代号唯一确定一个任务</li>
+<li>代号表示前一任务的结束,同时也表示后一任务的开始</li>
+<li>虚活动：为了表示逻辑关系、不消耗资源的</li>
+</ul>
+</li>
+</ul>
+<h4 id="甘特图"><a href="#甘特图" class="headerlink" title="甘特图"></a>甘特图</h4><blockquote>
+<p>分为棒状甘特图、三角形甘特图</p>
+</blockquote>
+<h4 id="里程碑图"><a href="#里程碑图" class="headerlink" title="里程碑图"></a>里程碑图</h4><blockquote>
+<p>显示项目进展中的重大工作完成情况。不同于活动，活动需要消耗资源，而里程碑不消耗资源和时间。</p>
+</blockquote>
+<h4 id="资源图"><a href="#资源图" class="headerlink" title="资源图"></a>资源图</h4><blockquote>
+<p>显示资源分配的情况</p>
+</blockquote>
+<h3 id="任务历时估算"><a href="#任务历时估算" class="headerlink" title="任务历时估算"></a>任务历时估算</h3><ul>
+<li>定额估算法<ul>
+<li>T=Q/(R*S)</li>
+<li>T:活动历时</li>
+<li>Q:任务工作量</li>
+<li>R:人力数量</li>
+<li>S:工作效率</li>
+</ul>
+</li>
+<li>经验导出模型<ul>
+<li>经验导出模型：D=a*E^b：</li>
+<li>D:进度(以月单位)</li>
+<li>E：工作量(以人月单位)</li>
+<li>a:2—4之间</li>
+<li>b:1/3左右:依赖于项目 </li>
+</ul>
+</li>
+<li>CPM(关键路径法估计)</li>
+<li><p>PERT(工程评估评审技术)</p>
+<ul>
+<li>期望值E=（O+4m+P)/6</li>
+<li>O是最小估算值:乐观(Optimistic)， </li>
+<li>P是最大估算值:悲观(Pessimistic)，</li>
+<li>M是最大可能估算(Most Likely) </li>
+<li>标准差δ =(最大估算值-最小估算值)/6</li>
+<li>方差δ 2 = [(最大估算值-最小估算值)/6]^2</li>
+</ul>
+</li>
+<li><p>基于承诺的进度估计</p>
+</li>
+<li>Jones的一阶估算准则</li>
+</ul>
+<h3 id="进度计划编排"><a href="#进度计划编排" class="headerlink" title="进度计划编排"></a>进度计划编排</h3><h4 id="关键路径法"><a href="#关键路径法" class="headerlink" title="关键路径法"></a>关键路径法</h4><ul>
+<li><p>自由浮动时间：在不影响后置任务最早开始时间的前提下，一个任务可以延迟的时间</p>
+<h4 id="时间压缩法"><a href="#时间压缩法" class="headerlink" title="时间压缩法"></a>时间压缩法</h4></li>
+<li><p>应急法：压缩时间、压缩成本</p>
+</li>
+<li>平行作业法：对任务进行合理拆分，如提前某些任务</li>
+</ul>
+<h4 id="管理预留"><a href="#管理预留" class="headerlink" title="管理预留"></a>管理预留</h4><ul>
+<li>设置缓冲时间</li>
+</ul>
+<h4 id="资源平衡"><a href="#资源平衡" class="headerlink" title="资源平衡"></a>资源平衡</h4><ul>
+<li>调整任务的时间来协调资源的冲突</li>
+</ul>
+<h4 id="敏捷计划"><a href="#敏捷计划" class="headerlink" title="敏捷计划"></a>敏捷计划</h4><ul>
+<li>迭代周期</li>
+</ul>
+<h2 id="质量计划"><a href="#质量计划" class="headerlink" title="质量计划"></a>质量计划</h2><ul>
+<li>质量是满足要求的程度,包括符合规定的要求和满足顾客隐含需求</li>
+<li>软件质量是软件满足明确说明或者隐含的需求的程度</li>
+<li>质量形成于产品或者服务的开发过程中，而不是事后的检查（测试）把关等</li>
+<li>质量成本是由于产品的第一次工作不正常而衍生的附加花费，包括预防成本、缺陷成本</li>
+</ul>
+<h3 id="软件质量模型"><a href="#软件质量模型" class="headerlink" title="软件质量模型"></a>软件质量模型</h3><ul>
+<li>Boehm质量模型</li>
+<li>McCall质量模型</li>
+<li>ISO质量模型</li>
+</ul>
+<p>质量管理的对象：过程质量、产品质量</p>
+<h3 id="软件质量管理过程"><a href="#软件质量管理过程" class="headerlink" title="软件质量管理过程"></a>软件质量管理过程</h3><ul>
+<li>软件质量计划</li>
+<li>软件质量保证</li>
+<li>软件质量控制</li>
+</ul>
+<h3 id="质量计划方法"><a href="#质量计划方法" class="headerlink" title="质量计划方法"></a>质量计划方法</h3><ul>
+<li>试验设计</li>
+<li>基准对照</li>
+<li>质量成本分析</li>
+<li>流程图方法</li>
+<li>因果分析图</li>
+</ul>
+<h2 id="配置管理计划"><a href="#配置管理计划" class="headerlink" title="配置管理计划"></a>配置管理计划</h2><blockquote>
+<p>记录软件产品的演化过程；得到精确的产品配置；最终保证软件产品的完整性、一致性、追朔性、可控性</p>
+</blockquote>
+<p>配置管理的主要功能</p>
+<ul>
+<li>版本管理</li>
+<li>变更管理</li>
+</ul>
+<p>一些概念</p>
+<ul>
+<li>配置项：受控于软件配置管理的款项</li>
+<li>基线提供了软件生存期中各个开发阶段的一个特定点</li>
+<li>一个(些)配置项形成并通过审核，即形成基线</li>
+<li>基线标志开发过程一个阶段的结束和里程碑</li>
+<li>基线修改需要按照正式的程序执行</li>
+</ul>
+<h3 id="配置管理的基本过程"><a href="#配置管理的基本过程" class="headerlink" title="配置管理的基本过程"></a>配置管理的基本过程</h3><ul>
+<li>配置标示、跟踪</li>
+<li>配置管理环境建立</li>
+<li>基线变更管理</li>
+<li>配置管理审计</li>
+<li>配置状态统计</li>
+<li>配置管理计划</li>
+</ul>
+<h2 id="软件项目与人员沟通计划"><a href="#软件项目与人员沟通计划" class="headerlink" title="软件项目与人员沟通计划"></a>软件项目与人员沟通计划</h2><h3 id="组织结构的主要类型"><a href="#组织结构的主要类型" class="headerlink" title="组织结构的主要类型"></a>组织结构的主要类型</h3><h4 id="职能型"><a href="#职能型" class="headerlink" title="职能型"></a>职能型</h4><ul>
+<li>优点<ul>
+<li>可以充分发挥职能部门的资源集中优势</li>
+<li>部门的专家可以同时为部门内不同项目使用</li>
+<li>便于相互交流 , 相互支援</li>
+<li>可以随时增派人员</li>
+<li>可以将项目和本部门的职能工作融为一体</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>项目和部门利益发生冲突，职能部门更重视本部门目标,会忽视项目目标</li>
+<li>资源平衡会出现问题</li>
+<li>权利分割不利于各个职能部门的交流和团结协作</li>
+<li>行政隶属关系使得项目经理没有充分的权利<h4 id="项目型"><a href="#项目型" class="headerlink" title="项目型"></a>项目型</h4></li>
+</ul>
+</li>
+<li>优点<ul>
+<li>项目经理对项目可以负全责</li>
+<li>项目目标单一，可以以项目为中心,有利于项目顺利进行</li>
+<li>避免多重领导</li>
+<li>组织结构简单，交流简单,快速</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>资源不能共享</li>
+<li>各个独立的项目处于相对封闭状态,不利于公司政策的贯彻</li>
+<li>对项目组织的成员缺少一种事业上的连续性和安全感</li>
+<li>项目组织之间处于分割状态,缺少信息交流</li>
+</ul>
+</li>
+</ul>
+<h4 id="矩阵型"><a href="#矩阵型" class="headerlink" title="矩阵型"></a>矩阵型</h4><ul>
+<li>优点<ul>
+<li>专职的项目经理负责整个项目 , 以项目为中心,</li>
+<li>公司的多个项目可以共享各个职能部门的资源</li>
+<li>即利于项目目标的实现,又利于公司目标方针的贯彻</li>
+<li>项目成员的顾虑减少了</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>容易引起职能经理和项目经理权力的冲突</li>
+<li>资源共享也能引起项目之间的冲突</li>
+</ul>
+</li>
+</ul>
+<h3 id="干系人管理计划"><a href="#干系人管理计划" class="headerlink" title="干系人管理计划"></a>干系人管理计划</h3><ul>
+<li>干系人（stakeholder）是能影响项目决策、活动或者结果的个人、群体或者组织，以及会受到或者自认为会受到项目决策、活动或者结果影响的个人、群体或者组织</li>
+<li>识别出干系人，分析和记录他们的相关信息。例如联络信息、他们的利益、参与度、影响力、以及对项目成功的潜在影响。</li>
+</ul>
+<h3 id="项目沟通的基本原则"><a href="#项目沟通的基本原则" class="headerlink" title="项目沟通的基本原则"></a>项目沟通的基本原则</h3><ul>
+<li>及时性</li>
+<li>准确性</li>
+<li>完整性</li>
+<li>可理解性</li>
+</ul>
+<h3 id="项目沟通的方式"><a href="#项目沟通的方式" class="headerlink" title="项目沟通的方式"></a>项目沟通的方式</h3><ul>
+<li>书面沟通和口头沟通</li>
+<li>语言沟通和非语言沟通</li>
+<li>正式沟通和非正式沟通</li>
+<li>单向沟通和双向沟通</li>
+<li>网络沟通</li>
+</ul>
+<h3 id="项目沟通计划"><a href="#项目沟通计划" class="headerlink" title="项目沟通计划"></a>项目沟通计划</h3><ul>
+<li>沟通计划是确定谁需要信息，需要什么信息，何时需要信息，以及如何将信息分发给他们</li>
+</ul>
+<h2 id="风险计划"><a href="#风险计划" class="headerlink" title="风险计划"></a>风险计划</h2><h3 id="风险类型"><a href="#风险类型" class="headerlink" title="风险类型"></a>风险类型</h3><ul>
+<li>预测角度：已知风险、可预测风险、不可预测风险</li>
+<li>范围角度：商业风险、管理风险、人员风险、技术风险、开发环境风险、客户风险、过程风险、产品规模风险等。</li>
+</ul>
+<h3 id="风险识别"><a href="#风险识别" class="headerlink" title="风险识别"></a>风险识别</h3><blockquote>
+<p>风险识别是试图通过系统化地确定对项目计划的威胁，识别已知和可预测的风险。</p>
+</blockquote>
+<h4 id="风险识别方法"><a href="#风险识别方法" class="headerlink" title="风险识别方法"></a>风险识别方法</h4><ul>
+<li>德尔菲方法</li>
+<li>头脑风暴法</li>
+<li>情景分析法</li>
+<li>利用风险条目检查表</li>
+</ul>
+<h3 id="风险评估"><a href="#风险评估" class="headerlink" title="风险评估"></a>风险评估</h3><blockquote>
+<p>对风险事件发生概率的评估，对项目风险影响的评估，给出项目风险排序。</p>
+</blockquote>
+<ul>
+<li>定性风险评估</li>
+<li>定量风险评估<ul>
+<li>盈亏平衡分析</li>
+<li>模拟</li>
+<li>决策树分析：是一种图表分析方法；提供项目所有可供选择的行动方案，行动方案之间的关系，行动方案的后果以及发生的概率；提供选择一个最佳的方案的依据。<ul>
+<li>EMV (损益期望值)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="风险规划"><a href="#风险规划" class="headerlink" title="风险规划"></a>风险规划</h3><blockquote>
+<p>针对风险分析的结果，为提高实现项目目标的机会，降低风险的负面影响而制定风险应对策略和应对措施的过程，即制定一定的行动和策略来对付、减少、以至于消灭风险事件造成的影响。</p>
+</blockquote>
+<h3 id="风险应对策略"><a href="#风险应对策略" class="headerlink" title="风险应对策略"></a>风险应对策略</h3><ul>
+<li>回避风险：例如放弃采用新技术。</li>
+<li>转移风险：例如开脱责任合同。</li>
+<li>损失控制<ul>
+<li>损失预防：例如项目技术培训。</li>
+<li>损失抑制：项目人员储备</li>
+</ul>
+</li>
+<li>自留风险：由项目组织自己承担风险事故所致损失的措施</li>
+</ul>
+<h2 id="合同计划"><a href="#合同计划" class="headerlink" title="合同计划"></a>合同计划</h2><h3 id="项目采购"><a href="#项目采购" class="headerlink" title="项目采购"></a>项目采购</h3><blockquote>
+<p>为了执行项目而从项目团队外部获取产品、服务或者结果的过程.</p>
+</blockquote>
+<h3 id="合同类型"><a href="#合同类型" class="headerlink" title="合同类型"></a>合同类型</h3><ul>
+<li>成本补偿合同<ul>
+<li>成本加成本百分比</li>
+<li>成本加固定费用</li>
+<li>成本加奖金</li>
+</ul>
+</li>
+<li>固定价格合同<ul>
+<li>固定价格加奖励费</li>
+<li>固定总价</li>
+</ul>
+</li>
+<li>单价合同<ul>
+<li>工程师单价:130美元/工时</li>
+<li>产品单价:1500元/功能点</li>
+</ul>
+</li>
+</ul>
+<h2 id="集成计划"><a href="#集成计划" class="headerlink" title="集成计划"></a>集成计划</h2><h3 id="软件项目管理最重要的四个要素"><a href="#软件项目管理最重要的四个要素" class="headerlink" title="软件项目管理最重要的四个要素"></a>软件项目管理最重要的四个要素</h3><ul>
+<li>范围</li>
+<li>质量</li>
+<li>进度</li>
+<li>成本</li>
+</ul>
+<hr>
+<ul>
+<li>关系：<ul>
+<li>范围和成本正比关系。</li>
+<li>质量和成本正比关系。</li>
+<li>进度和成本反比关系。</li>
+</ul>
+</li>
+</ul>
+<p>##集成计划执行控制</p>
+<h3 id="项目执行控制的步骤"><a href="#项目执行控制的步骤" class="headerlink" title="项目执行控制的步骤"></a>项目执行控制的步骤</h3><ul>
+<li>建立标准</li>
+<li>采集项目实际数据（对项目管理、开发和质量活动进行跟踪。记录反映当前项目状态的数据。）</li>
+<li>实际结果与计划比较</li>
+<li>决定是否修正计划（根据评审结果决定是否修改项目计划，计划的不合理。客观原因导致。）</li>
+<li>修正计划，协调各方</li>
+</ul>
 
       
     </div>
@@ -764,7 +1204,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#个人笔记"><span class="nav-number">1.</span> <span class="nav-text">个人笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#项目管理概述"><span class="nav-number">1.1.</span> <span class="nav-text">项目管理概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目特征"><span class="nav-number">1.1.1.</span> <span class="nav-text">项目特征</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件项目特殊性"><span class="nav-number">1.1.2.</span> <span class="nav-text">软件项目特殊性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目管理知识体系"><span class="nav-number">1.1.3.</span> <span class="nav-text">项目管理知识体系</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#10个知识领域"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">10个知识领域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5个标准化过程"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">5个标准化过程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目确立"><span class="nav-number">1.2.</span> <span class="nav-text">项目确立</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目立项"><span class="nav-number">1.2.1.</span> <span class="nav-text">项目立项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目招投标"><span class="nav-number">1.2.2.</span> <span class="nav-text">项目招投标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目章程"><span class="nav-number">1.2.3.</span> <span class="nav-text">项目章程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目经理的职责"><span class="nav-number">1.2.4.</span> <span class="nav-text">项目经理的职责</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生存期模型"><span class="nav-number">1.3.</span> <span class="nav-text">生存期模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#瀑布模型"><span class="nav-number">1.3.1.</span> <span class="nav-text">瀑布模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#V模型"><span class="nav-number">1.3.2.</span> <span class="nav-text">V模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速原型模型"><span class="nav-number">1.3.3.</span> <span class="nav-text">快速原型模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增量模型"><span class="nav-number">1.3.4.</span> <span class="nav-text">增量模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#渐进式阶段模型"><span class="nav-number">1.3.5.</span> <span class="nav-text">渐进式阶段模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#敏捷模型"><span class="nav-number">1.3.6.</span> <span class="nav-text">敏捷模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#scrum-燃尽图"><span class="nav-number">1.3.6.1.</span> <span class="nav-text">scrum-燃尽图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#极限编程-xp"><span class="nav-number">1.3.6.2.</span> <span class="nav-text">极限编程-xp</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#软件需求"><span class="nav-number">1.4.</span> <span class="nav-text">软件需求</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#软件需求定义"><span class="nav-number">1.4.1.</span> <span class="nav-text">软件需求定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#需求管理过程"><span class="nav-number">1.4.2.</span> <span class="nav-text">需求管理过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#需求建模方法"><span class="nav-number">1.4.3.</span> <span class="nav-text">需求建模方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务分解"><span class="nav-number">1.5.</span> <span class="nav-text">任务分解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#WBS和工作包"><span class="nav-number">1.5.1.</span> <span class="nav-text">WBS和工作包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#任务分解形式"><span class="nav-number">1.5.2.</span> <span class="nav-text">任务分解形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#任务分解过程"><span class="nav-number">1.5.3.</span> <span class="nav-text">任务分解过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#任务分解基本步骤"><span class="nav-number">1.5.3.1.</span> <span class="nav-text">任务分解基本步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#任务分解的标准"><span class="nav-number">1.5.3.2.</span> <span class="nav-text">任务分解的标准</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#WBS任务分解建议"><span class="nav-number">1.5.3.3.</span> <span class="nav-text">WBS任务分解建议</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WBS字典"><span class="nav-number">1.5.4.</span> <span class="nav-text">WBS字典</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#任务分解方法"><span class="nav-number">1.5.5.</span> <span class="nav-text">任务分解方法</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#个人笔记"><span class="nav-number">1.</span> <span class="nav-text">个人笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#项目管理概述"><span class="nav-number">1.1.</span> <span class="nav-text">项目管理概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目特征"><span class="nav-number">1.1.1.</span> <span class="nav-text">项目特征</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件项目特殊性"><span class="nav-number">1.1.2.</span> <span class="nav-text">软件项目特殊性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目管理知识体系"><span class="nav-number">1.1.3.</span> <span class="nav-text">项目管理知识体系</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#10个知识领域"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">10个知识领域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5个标准化过程"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">5个标准化过程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目确立"><span class="nav-number">1.2.</span> <span class="nav-text">项目确立</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目立项"><span class="nav-number">1.2.1.</span> <span class="nav-text">项目立项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目招投标"><span class="nav-number">1.2.2.</span> <span class="nav-text">项目招投标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目章程"><span class="nav-number">1.2.3.</span> <span class="nav-text">项目章程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目经理的职责"><span class="nav-number">1.2.4.</span> <span class="nav-text">项目经理的职责</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生存期模型"><span class="nav-number">1.3.</span> <span class="nav-text">生存期模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#瀑布模型"><span class="nav-number">1.3.1.</span> <span class="nav-text">瀑布模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#V模型"><span class="nav-number">1.3.2.</span> <span class="nav-text">V模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速原型模型"><span class="nav-number">1.3.3.</span> <span class="nav-text">快速原型模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增量模型"><span class="nav-number">1.3.4.</span> <span class="nav-text">增量模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#渐进式阶段模型"><span class="nav-number">1.3.5.</span> <span class="nav-text">渐进式阶段模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#敏捷模型"><span class="nav-number">1.3.6.</span> <span class="nav-text">敏捷模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#scrum-燃尽图"><span class="nav-number">1.3.6.1.</span> <span class="nav-text">scrum-燃尽图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#极限编程-xp"><span class="nav-number">1.3.6.2.</span> <span class="nav-text">极限编程-xp</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#软件需求"><span class="nav-number">1.4.</span> <span class="nav-text">软件需求</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#软件需求定义"><span class="nav-number">1.4.1.</span> <span class="nav-text">软件需求定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#需求管理过程"><span class="nav-number">1.4.2.</span> <span class="nav-text">需求管理过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#需求建模方法"><span class="nav-number">1.4.3.</span> <span class="nav-text">需求建模方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务分解"><span class="nav-number">1.5.</span> <span class="nav-text">任务分解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#WBS和工作包"><span class="nav-number">1.5.1.</span> <span class="nav-text">WBS和工作包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#任务分解形式"><span class="nav-number">1.5.2.</span> <span class="nav-text">任务分解形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#任务分解过程"><span class="nav-number">1.5.3.</span> <span class="nav-text">任务分解过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#任务分解基本步骤"><span class="nav-number">1.5.3.1.</span> <span class="nav-text">任务分解基本步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#任务分解的标准"><span class="nav-number">1.5.3.2.</span> <span class="nav-text">任务分解的标准</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#WBS任务分解建议"><span class="nav-number">1.5.3.3.</span> <span class="nav-text">WBS任务分解建议</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WBS字典"><span class="nav-number">1.5.4.</span> <span class="nav-text">WBS字典</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#任务分解方法"><span class="nav-number">1.5.5.</span> <span class="nav-text">任务分解方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#成本计划"><span class="nav-number">1.6.</span> <span class="nav-text">成本计划</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#成本估算过程"><span class="nav-number">1.6.1.</span> <span class="nav-text">成本估算过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#软件项目规模"><span class="nav-number">1.6.1.1.</span> <span class="nav-text">软件项目规模</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#软件项目成本"><span class="nav-number">1.6.1.2.</span> <span class="nav-text">软件项目成本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#软件规模和软件成本的关系"><span class="nav-number">1.6.1.3.</span> <span class="nav-text">软件规模和软件成本的关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#成本估算结果"><span class="nav-number">1.6.1.4.</span> <span class="nav-text">成本估算结果</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#成本估算方法"><span class="nav-number">1.6.2.</span> <span class="nav-text">成本估算方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码行估算法"><span class="nav-number">1.6.2.1.</span> <span class="nav-text">代码行估算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#功能点估算法"><span class="nav-number">1.6.2.2.</span> <span class="nav-text">功能点估算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用例点估算法"><span class="nav-number">1.6.2.3.</span> <span class="nav-text">用例点估算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类比估算法（自顶向下）"><span class="nav-number">1.6.2.4.</span> <span class="nav-text">类比估算法（自顶向下）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自下而上估算法"><span class="nav-number">1.6.2.5.</span> <span class="nav-text">自下而上估算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参数估算法"><span class="nav-number">1.6.2.6.</span> <span class="nav-text">参数估算法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#COCOMO-81-模型级别"><span class="nav-number">1.6.2.6.1.</span> <span class="nav-text">COCOMO 81 模型级别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#COCOMO-81-项目类型"><span class="nav-number">1.6.2.6.2.</span> <span class="nav-text">COCOMO 81 项目类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#COCOMO"><span class="nav-number">1.6.2.6.3.</span> <span class="nav-text">COCOMO ||</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#专家估算法"><span class="nav-number">1.6.2.7.</span> <span class="nav-text">专家估算法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#成本预算"><span class="nav-number">1.6.3.</span> <span class="nav-text">成本预算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进度计划"><span class="nav-number">1.7.</span> <span class="nav-text">进度计划</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#任务间关系的依据"><span class="nav-number">1.7.1.</span> <span class="nav-text">任务间关系的依据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程管理图示"><span class="nav-number">1.7.2.</span> <span class="nav-text">进程管理图示</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#网络图"><span class="nav-number">1.7.2.1.</span> <span class="nav-text">网络图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#甘特图"><span class="nav-number">1.7.2.2.</span> <span class="nav-text">甘特图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#里程碑图"><span class="nav-number">1.7.2.3.</span> <span class="nav-text">里程碑图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#资源图"><span class="nav-number">1.7.2.4.</span> <span class="nav-text">资源图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#任务历时估算"><span class="nav-number">1.7.3.</span> <span class="nav-text">任务历时估算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进度计划编排"><span class="nav-number">1.7.4.</span> <span class="nav-text">进度计划编排</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关键路径法"><span class="nav-number">1.7.4.1.</span> <span class="nav-text">关键路径法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#时间压缩法"><span class="nav-number">1.7.4.2.</span> <span class="nav-text">时间压缩法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#管理预留"><span class="nav-number">1.7.4.3.</span> <span class="nav-text">管理预留</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#资源平衡"><span class="nav-number">1.7.4.4.</span> <span class="nav-text">资源平衡</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#敏捷计划"><span class="nav-number">1.7.4.5.</span> <span class="nav-text">敏捷计划</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#质量计划"><span class="nav-number">1.8.</span> <span class="nav-text">质量计划</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#软件质量模型"><span class="nav-number">1.8.1.</span> <span class="nav-text">软件质量模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件质量管理过程"><span class="nav-number">1.8.2.</span> <span class="nav-text">软件质量管理过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#质量计划方法"><span class="nav-number">1.8.3.</span> <span class="nav-text">质量计划方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置管理计划"><span class="nav-number">1.9.</span> <span class="nav-text">配置管理计划</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置管理的基本过程"><span class="nav-number">1.9.1.</span> <span class="nav-text">配置管理的基本过程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#软件项目与人员沟通计划"><span class="nav-number">1.10.</span> <span class="nav-text">软件项目与人员沟通计划</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#组织结构的主要类型"><span class="nav-number">1.10.1.</span> <span class="nav-text">组织结构的主要类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#职能型"><span class="nav-number">1.10.1.1.</span> <span class="nav-text">职能型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#项目型"><span class="nav-number">1.10.1.2.</span> <span class="nav-text">项目型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#矩阵型"><span class="nav-number">1.10.1.3.</span> <span class="nav-text">矩阵型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#干系人管理计划"><span class="nav-number">1.10.2.</span> <span class="nav-text">干系人管理计划</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目沟通的基本原则"><span class="nav-number">1.10.3.</span> <span class="nav-text">项目沟通的基本原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目沟通的方式"><span class="nav-number">1.10.4.</span> <span class="nav-text">项目沟通的方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目沟通计划"><span class="nav-number">1.10.5.</span> <span class="nav-text">项目沟通计划</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#风险计划"><span class="nav-number">1.11.</span> <span class="nav-text">风险计划</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#风险类型"><span class="nav-number">1.11.1.</span> <span class="nav-text">风险类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#风险识别"><span class="nav-number">1.11.2.</span> <span class="nav-text">风险识别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#风险识别方法"><span class="nav-number">1.11.2.1.</span> <span class="nav-text">风险识别方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#风险评估"><span class="nav-number">1.11.3.</span> <span class="nav-text">风险评估</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#风险规划"><span class="nav-number">1.11.4.</span> <span class="nav-text">风险规划</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#风险应对策略"><span class="nav-number">1.11.5.</span> <span class="nav-text">风险应对策略</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#合同计划"><span class="nav-number">1.12.</span> <span class="nav-text">合同计划</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目采购"><span class="nav-number">1.12.1.</span> <span class="nav-text">项目采购</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#合同类型"><span class="nav-number">1.12.2.</span> <span class="nav-text">合同类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集成计划"><span class="nav-number">1.13.</span> <span class="nav-text">集成计划</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#软件项目管理最重要的四个要素"><span class="nav-number">1.13.1.</span> <span class="nav-text">软件项目管理最重要的四个要素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目执行控制的步骤"><span class="nav-number">1.13.2.</span> <span class="nav-text">项目执行控制的步骤</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -802,7 +1242,7 @@
       <span class="post-meta-item-text">总字数&#58;</span>
     
     <span title="总字数">
-      4.2k 字
+      8.2k 字
     </span>
   
 </div>
