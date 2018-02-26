@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[科学上网安卓版]]></title>
+    <title><![CDATA[科学上网]]></title>
     <url>%2F2018%2F02%2F24%2F%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E5%AE%89%E5%8D%93%E7%89%88%2F</url>
-    <content type="text"><![CDATA[仅供学习使用 步骤一：下载SSR客户端 链接: 下载地址 提取密码: 16tp 初始界面 步骤二：配置方法一：二维码（推荐） 点击shadowsocksR 方法二：手动配置 配置界面（只用配置一次） 1、输入ip地址 2、输入端口号 3、输入密码 4、加密方法选aes-256-cfb 5、协议选：auth_sha1_v4 6、混淆选：plain 7、路由选：仅代理中国大陆无法访问的地址 步骤三：完成！ 点击连接 愉快的学习！！！]]></content>
+    <content type="text"><![CDATA[仅供学习使用（内含安卓版、iOS版、Windows版、Mac版） 安卓版步骤一：下载SSR客户端 链接: 下载地址 提取密码: 16tp 初始界面 步骤二：配置方法一：二维码（推荐） 点击shadowsocksR 方法二：手动配置 配置界面（只用配置一次） 1、输入ip地址 2、输入端口号 3、输入密码 4、加密方法选aes-256-cfb 5、协议选：auth_sha1_v4 6、混淆选：plain 7、路由选：仅代理中国大陆无法访问的地址 步骤三：完成！ 点击连接 愉快的学习！！！ iOS版步骤一：下载ss客户端 前往App Store 下载FirstWingy软件 步骤二：配置 输入相应的服务器、端口号、密码即可 步骤三：完成！ 点击连接 愉快的学习 Mac版步骤一：下载ss客户端 下载地址 步骤二：配置 输入相应的服务器、端口号、密码即可 步骤三：完成！ 点击连接 愉快的学习 Windows版步骤一：下载ssr客户端 下载地址 步骤二：配置 配置方式和Mac版相同 输入相应的服务器、端口号、密码即可 步骤三：完成！ 点击连接 愉快的学习]]></content>
       <categories>
         <category>科学上网</category>
       </categories>
